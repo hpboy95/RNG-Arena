@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E689A7C51DB19BD1000693E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689A7C41DB19BD1000693E6 /* AppDelegate.swift */; };
+		E689A7C71DB19BD1000693E6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E689A7C61DB19BD1000693E6 /* GameScene.sks */; };
+		E689A7C91DB19BD1000693E6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E689A7C81DB19BD1000693E6 /* Actions.sks */; };
+		E689A7CB1DB19BD1000693E6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689A7CA1DB19BD1000693E6 /* GameScene.swift */; };
+		E689A7CD1DB19BD1000693E6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689A7CC1DB19BD1000693E6 /* GameViewController.swift */; };
+		E689A7D01DB19BD1000693E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E689A7CE1DB19BD1000693E6 /* Main.storyboard */; };
+		E689A7D21DB19BD1000693E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E689A7D11DB19BD1000693E6 /* Assets.xcassets */; };
+		E689A7D51DB19BD1000693E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E689A7D31DB19BD1000693E6 /* LaunchScreen.storyboard */; };
+		E689A7E01DB19BD1000693E6 /* RNG_ArenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689A7DF1DB19BD1000693E6 /* RNG_ArenaTests.swift */; };
+		E689A7EB1DB19BD1000693E6 /* RNG_ArenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689A7EA1DB19BD1000693E6 /* RNG_ArenaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E689A7DC1DB19BD1000693E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E689A7B91DB19BD0000693E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E689A7C01DB19BD0000693E6;
+			remoteInfo = "RNG Arena";
+		};
+		E689A7E71DB19BD1000693E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E689A7B91DB19BD0000693E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E689A7C01DB19BD0000693E6;
+			remoteInfo = "RNG Arena";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E689A7C11DB19BD0000693E6 /* RNG Arena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNG Arena.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E689A7C41DB19BD1000693E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E689A7C61DB19BD1000693E6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		E689A7C81DB19BD1000693E6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		E689A7CA1DB19BD1000693E6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		E689A7CC1DB19BD1000693E6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E689A7CF1DB19BD1000693E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E689A7D11DB19BD1000693E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E689A7D41DB19BD1000693E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E689A7D61DB19BD1000693E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E689A7DB1DB19BD1000693E6 /* RNG ArenaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNG ArenaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E689A7DF1DB19BD1000693E6 /* RNG_ArenaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNG_ArenaTests.swift; sourceTree = "<group>"; };
+		E689A7E11DB19BD1000693E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E689A7E61DB19BD1000693E6 /* RNG ArenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNG ArenaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E689A7EA1DB19BD1000693E6 /* RNG_ArenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNG_ArenaUITests.swift; sourceTree = "<group>"; };
+		E689A7EC1DB19BD1000693E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E689A7BE1DB19BD0000693E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E689A7D81DB19BD1000693E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E689A7E31DB19BD1000693E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E689A7B81DB19BD0000693E6 = {
+			isa = PBXGroup;
+			children = (
+				E689A7C31DB19BD0000693E6 /* RNG Arena */,
+				E689A7DE1DB19BD1000693E6 /* RNG ArenaTests */,
+				E689A7E91DB19BD1000693E6 /* RNG ArenaUITests */,
+				E689A7C21DB19BD0000693E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E689A7C21DB19BD0000693E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E689A7C11DB19BD0000693E6 /* RNG Arena.app */,
+				E689A7DB1DB19BD1000693E6 /* RNG ArenaTests.xctest */,
+				E689A7E61DB19BD1000693E6 /* RNG ArenaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E689A7C31DB19BD0000693E6 /* RNG Arena */ = {
+			isa = PBXGroup;
+			children = (
+				E689A7C41DB19BD1000693E6 /* AppDelegate.swift */,
+				E689A7C61DB19BD1000693E6 /* GameScene.sks */,
+				E689A7C81DB19BD1000693E6 /* Actions.sks */,
+				E689A7CA1DB19BD1000693E6 /* GameScene.swift */,
+				E689A7CC1DB19BD1000693E6 /* GameViewController.swift */,
+				E689A7CE1DB19BD1000693E6 /* Main.storyboard */,
+				E689A7D11DB19BD1000693E6 /* Assets.xcassets */,
+				E689A7D31DB19BD1000693E6 /* LaunchScreen.storyboard */,
+				E689A7D61DB19BD1000693E6 /* Info.plist */,
+			);
+			path = "RNG Arena";
+			sourceTree = "<group>";
+		};
+		E689A7DE1DB19BD1000693E6 /* RNG ArenaTests */ = {
+			isa = PBXGroup;
+			children = (
+				E689A7DF1DB19BD1000693E6 /* RNG_ArenaTests.swift */,
+				E689A7E11DB19BD1000693E6 /* Info.plist */,
+			);
+			path = "RNG ArenaTests";
+			sourceTree = "<group>";
+		};
+		E689A7E91DB19BD1000693E6 /* RNG ArenaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E689A7EA1DB19BD1000693E6 /* RNG_ArenaUITests.swift */,
+				E689A7EC1DB19BD1000693E6 /* Info.plist */,
+			);
+			path = "RNG ArenaUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E689A7C01DB19BD0000693E6 /* RNG Arena */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E689A7EF1DB19BD1000693E6 /* Build configuration list for PBXNativeTarget "RNG Arena" */;
+			buildPhases = (
+				E689A7BD1DB19BD0000693E6 /* Sources */,
+				E689A7BE1DB19BD0000693E6 /* Frameworks */,
+				E689A7BF1DB19BD0000693E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RNG Arena";
+			productName = "RNG Arena";
+			productReference = E689A7C11DB19BD0000693E6 /* RNG Arena.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E689A7DA1DB19BD1000693E6 /* RNG ArenaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E689A7F21DB19BD1000693E6 /* Build configuration list for PBXNativeTarget "RNG ArenaTests" */;
+			buildPhases = (
+				E689A7D71DB19BD1000693E6 /* Sources */,
+				E689A7D81DB19BD1000693E6 /* Frameworks */,
+				E689A7D91DB19BD1000693E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E689A7DD1DB19BD1000693E6 /* PBXTargetDependency */,
+			);
+			name = "RNG ArenaTests";
+			productName = "RNG ArenaTests";
+			productReference = E689A7DB1DB19BD1000693E6 /* RNG ArenaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E689A7E51DB19BD1000693E6 /* RNG ArenaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E689A7F51DB19BD1000693E6 /* Build configuration list for PBXNativeTarget "RNG ArenaUITests" */;
+			buildPhases = (
+				E689A7E21DB19BD1000693E6 /* Sources */,
+				E689A7E31DB19BD1000693E6 /* Frameworks */,
+				E689A7E41DB19BD1000693E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E689A7E81DB19BD1000693E6 /* PBXTargetDependency */,
+			);
+			name = "RNG ArenaUITests";
+			productName = "RNG ArenaUITests";
+			productReference = E689A7E61DB19BD1000693E6 /* RNG ArenaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E689A7B91DB19BD0000693E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Hezekiah Valdez";
+				TargetAttributes = {
+					E689A7C01DB19BD0000693E6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = JBJZJ45R59;
+						ProvisioningStyle = Automatic;
+					};
+					E689A7DA1DB19BD1000693E6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = JBJZJ45R59;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E689A7C01DB19BD0000693E6;
+					};
+					E689A7E51DB19BD1000693E6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = JBJZJ45R59;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E689A7C01DB19BD0000693E6;
+					};
+				};
+			};
+			buildConfigurationList = E689A7BC1DB19BD0000693E6 /* Build configuration list for PBXProject "RNG Arena" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E689A7B81DB19BD0000693E6;
+			productRefGroup = E689A7C21DB19BD0000693E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E689A7C01DB19BD0000693E6 /* RNG Arena */,
+				E689A7DA1DB19BD1000693E6 /* RNG ArenaTests */,
+				E689A7E51DB19BD1000693E6 /* RNG ArenaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E689A7BF1DB19BD0000693E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E689A7D01DB19BD1000693E6 /* Main.storyboard in Resources */,
+				E689A7C71DB19BD1000693E6 /* GameScene.sks in Resources */,
+				E689A7D21DB19BD1000693E6 /* Assets.xcassets in Resources */,
+				E689A7D51DB19BD1000693E6 /* LaunchScreen.storyboard in Resources */,
+				E689A7C91DB19BD1000693E6 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E689A7D91DB19BD1000693E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E689A7E41DB19BD1000693E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E689A7BD1DB19BD0000693E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E689A7CB1DB19BD1000693E6 /* GameScene.swift in Sources */,
+				E689A7CD1DB19BD1000693E6 /* GameViewController.swift in Sources */,
+				E689A7C51DB19BD1000693E6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E689A7D71DB19BD1000693E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E689A7E01DB19BD1000693E6 /* RNG_ArenaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E689A7E21DB19BD1000693E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E689A7EB1DB19BD1000693E6 /* RNG_ArenaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E689A7DD1DB19BD1000693E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E689A7C01DB19BD0000693E6 /* RNG Arena */;
+			targetProxy = E689A7DC1DB19BD1000693E6 /* PBXContainerItemProxy */;
+		};
+		E689A7E81DB19BD1000693E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E689A7C01DB19BD0000693E6 /* RNG Arena */;
+			targetProxy = E689A7E71DB19BD1000693E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E689A7CE1DB19BD1000693E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E689A7CF1DB19BD1000693E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E689A7D31DB19BD1000693E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E689A7D41DB19BD1000693E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E689A7ED1DB19BD1000693E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E689A7EE1DB19BD1000693E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E689A7F01DB19BD1000693E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JBJZJ45R59;
+				INFOPLIST_FILE = "RNG Arena/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.RNG-Arena";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E689A7F11DB19BD1000693E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JBJZJ45R59;
+				INFOPLIST_FILE = "RNG Arena/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.RNG-Arena";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E689A7F31DB19BD1000693E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JBJZJ45R59;
+				INFOPLIST_FILE = "RNG ArenaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.RNG-ArenaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNG Arena.app/RNG Arena";
+			};
+			name = Debug;
+		};
+		E689A7F41DB19BD1000693E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JBJZJ45R59;
+				INFOPLIST_FILE = "RNG ArenaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.RNG-ArenaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNG Arena.app/RNG Arena";
+			};
+			name = Release;
+		};
+		E689A7F61DB19BD1000693E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JBJZJ45R59;
+				INFOPLIST_FILE = "RNG ArenaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.RNG-ArenaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "RNG Arena";
+			};
+			name = Debug;
+		};
+		E689A7F71DB19BD1000693E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JBJZJ45R59;
+				INFOPLIST_FILE = "RNG ArenaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HP.RNG-ArenaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "RNG Arena";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E689A7BC1DB19BD0000693E6 /* Build configuration list for PBXProject "RNG Arena" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E689A7ED1DB19BD1000693E6 /* Debug */,
+				E689A7EE1DB19BD1000693E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E689A7EF1DB19BD1000693E6 /* Build configuration list for PBXNativeTarget "RNG Arena" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E689A7F01DB19BD1000693E6 /* Debug */,
+				E689A7F11DB19BD1000693E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E689A7F21DB19BD1000693E6 /* Build configuration list for PBXNativeTarget "RNG ArenaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E689A7F31DB19BD1000693E6 /* Debug */,
+				E689A7F41DB19BD1000693E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E689A7F51DB19BD1000693E6 /* Build configuration list for PBXNativeTarget "RNG ArenaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E689A7F61DB19BD1000693E6 /* Debug */,
+				E689A7F71DB19BD1000693E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E689A7B91DB19BD0000693E6 /* Project object */;
+}
