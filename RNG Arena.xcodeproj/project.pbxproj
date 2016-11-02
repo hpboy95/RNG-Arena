@@ -17,6 +17,7 @@
 		E689A7D51DB19BD1000693E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E689A7D31DB19BD1000693E6 /* LaunchScreen.storyboard */; };
 		E689A7E01DB19BD1000693E6 /* RNG_ArenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689A7DF1DB19BD1000693E6 /* RNG_ArenaTests.swift */; };
 		E689A7EB1DB19BD1000693E6 /* RNG_ArenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689A7EA1DB19BD1000693E6 /* RNG_ArenaUITests.swift */; };
+		E6DC562E1DC9A4FB0004EBC1 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC562D1DC9A4FB0004EBC1 /* Engine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E689A7E61DB19BD1000693E6 /* RNG ArenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNG ArenaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E689A7EA1DB19BD1000693E6 /* RNG_ArenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNG_ArenaUITests.swift; sourceTree = "<group>"; };
 		E689A7EC1DB19BD1000693E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6DC562D1DC9A4FB0004EBC1 /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Engine.swift; path = "RNG Arena/Engine.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		E689A7B81DB19BD0000693E6 = {
 			isa = PBXGroup;
 			children = (
+				E6DC562F1DC9A5430004EBC1 /* Game Logic */,
 				E689A7C31DB19BD0000693E6 /* RNG Arena */,
 				E689A7DE1DB19BD1000693E6 /* RNG ArenaTests */,
 				E689A7E91DB19BD1000693E6 /* RNG ArenaUITests */,
@@ -132,6 +135,14 @@
 				E689A7EC1DB19BD1000693E6 /* Info.plist */,
 			);
 			path = "RNG ArenaUITests";
+			sourceTree = "<group>";
+		};
+		E6DC562F1DC9A5430004EBC1 /* Game Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E6DC562D1DC9A4FB0004EBC1 /* Engine.swift */,
+			);
+			name = "Game Logic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E689A7CB1DB19BD1000693E6 /* GameScene.swift in Sources */,
+				E6DC562E1DC9A4FB0004EBC1 /* Engine.swift in Sources */,
 				E689A7CD1DB19BD1000693E6 /* GameViewController.swift in Sources */,
 				E689A7C51DB19BD1000693E6 /* AppDelegate.swift in Sources */,
 			);
@@ -524,6 +536,7 @@
 				E689A7F11DB19BD1000693E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E689A7F21DB19BD1000693E6 /* Build configuration list for PBXNativeTarget "RNG ArenaTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +545,7 @@
 				E689A7F41DB19BD1000693E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E689A7F51DB19BD1000693E6 /* Build configuration list for PBXNativeTarget "RNG ArenaUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +554,7 @@
 				E689A7F71DB19BD1000693E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
