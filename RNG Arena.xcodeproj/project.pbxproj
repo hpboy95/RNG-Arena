@@ -17,7 +17,9 @@
 		E689A7D51DB19BD1000693E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E689A7D31DB19BD1000693E6 /* LaunchScreen.storyboard */; };
 		E689A7E01DB19BD1000693E6 /* RNG_ArenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689A7DF1DB19BD1000693E6 /* RNG_ArenaTests.swift */; };
 		E689A7EB1DB19BD1000693E6 /* RNG_ArenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E689A7EA1DB19BD1000693E6 /* RNG_ArenaUITests.swift */; };
+		E6A0C1B31DCC1107003F3F43 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A0C1B21DCC1107003F3F43 /* Ability.swift */; };
 		E6DC562E1DC9A4FB0004EBC1 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC562D1DC9A4FB0004EBC1 /* Engine.swift */; };
+		E6E1676B1DCBE07B004F2A15 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E1676A1DCBE07B004F2A15 /* Monster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +47,18 @@
 		E689A7CA1DB19BD1000693E6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E689A7CC1DB19BD1000693E6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E689A7CF1DB19BD1000693E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E689A7D11DB19BD1000693E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E689A7D11DB19BD1000693E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "RNG Arena/Assets.xcassets"; sourceTree = "<group>"; };
 		E689A7D41DB19BD1000693E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E689A7D61DB19BD1000693E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E689A7D61DB19BD1000693E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "RNG Arena/Info.plist"; sourceTree = "<group>"; };
 		E689A7DB1DB19BD1000693E6 /* RNG ArenaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNG ArenaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E689A7DF1DB19BD1000693E6 /* RNG_ArenaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNG_ArenaTests.swift; sourceTree = "<group>"; };
 		E689A7E11DB19BD1000693E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E689A7E61DB19BD1000693E6 /* RNG ArenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNG ArenaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E689A7EA1DB19BD1000693E6 /* RNG_ArenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNG_ArenaUITests.swift; sourceTree = "<group>"; };
 		E689A7EC1DB19BD1000693E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6A0C1B21DCC1107003F3F43 /* Ability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
 		E6DC562D1DC9A4FB0004EBC1 /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Engine.swift; path = "RNG Arena/Engine.swift"; sourceTree = "<group>"; };
+		E6E1676A1DCBE07B004F2A15 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		E689A7B81DB19BD0000693E6 = {
 			isa = PBXGroup;
 			children = (
+				E6A0C1B41DCC113B003F3F43 /* Support Files */,
 				E6DC562F1DC9A5430004EBC1 /* Game Logic */,
 				E689A7C31DB19BD0000693E6 /* RNG Arena */,
 				E689A7DE1DB19BD1000693E6 /* RNG ArenaTests */,
@@ -112,9 +117,6 @@
 				E689A7CA1DB19BD1000693E6 /* GameScene.swift */,
 				E689A7CC1DB19BD1000693E6 /* GameViewController.swift */,
 				E689A7CE1DB19BD1000693E6 /* Main.storyboard */,
-				E689A7D11DB19BD1000693E6 /* Assets.xcassets */,
-				E689A7D31DB19BD1000693E6 /* LaunchScreen.storyboard */,
-				E689A7D61DB19BD1000693E6 /* Info.plist */,
 			);
 			path = "RNG Arena";
 			sourceTree = "<group>";
@@ -137,10 +139,22 @@
 			path = "RNG ArenaUITests";
 			sourceTree = "<group>";
 		};
+		E6A0C1B41DCC113B003F3F43 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E689A7D61DB19BD1000693E6 /* Info.plist */,
+				E689A7D11DB19BD1000693E6 /* Assets.xcassets */,
+				E689A7D31DB19BD1000693E6 /* LaunchScreen.storyboard */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
 		E6DC562F1DC9A5430004EBC1 /* Game Logic */ = {
 			isa = PBXGroup;
 			children = (
 				E6DC562D1DC9A4FB0004EBC1 /* Engine.swift */,
+				E6E1676A1DCBE07B004F2A15 /* Monster.swift */,
+				E6A0C1B21DCC1107003F3F43 /* Ability.swift */,
 			);
 			name = "Game Logic";
 			sourceTree = "<group>";
@@ -284,9 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E1676B1DCBE07B004F2A15 /* Monster.swift in Sources */,
 				E689A7CB1DB19BD1000693E6 /* GameScene.swift in Sources */,
 				E6DC562E1DC9A4FB0004EBC1 /* Engine.swift in Sources */,
 				E689A7CD1DB19BD1000693E6 /* GameViewController.swift in Sources */,
+				E6A0C1B31DCC1107003F3F43 /* Ability.swift in Sources */,
 				E689A7C51DB19BD1000693E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +353,7 @@
 				E689A7D41DB19BD1000693E6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = "RNG Arena";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
