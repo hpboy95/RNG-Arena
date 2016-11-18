@@ -8,9 +8,18 @@
 
 import Foundation
 
-public class Ability {
+public struct Ability {
     
     private var name: String
-    private 
+    
+    public init(_ title: String){
+        self.name = title
+    }
+    
+    public func deal_damage(char: Monster){
+        
+        
+        
+    }
     
 }
