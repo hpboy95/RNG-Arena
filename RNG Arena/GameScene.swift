@@ -17,10 +17,12 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         backgroundColor = .orange
         
-        let ground = SKSpriteNode.init(color: UIColor.black, size: CGSize(width: view.frame.size.width, height: 20))
+        let ground = SKTexture.init(cgImage: #imageLiteral(resourceName: "Cyclopes") as! CGImage)
         
-        ground.position = view.center
-        addChild(ground)
+        let page = SKSpriteNode.init(texture: ground, size: CGSize(width: 30, height: 40))
+        
+        page.position = view.center
+        addChild(page)
     }
     
     
