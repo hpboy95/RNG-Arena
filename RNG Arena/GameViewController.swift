@@ -19,11 +19,11 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         //Configure the view of victory
-        let skView = view as! SKView
+        let skView = self.view as! SKView
         
         //Create and configure scene
-        scene = GameScene(size: skView.bounds.size) //Fill to boundries of the scene
-        scene.scaleMode = .aspectFill //Set aspect ratio
+        scene = GameScene() //Fill to boundries of the scene
+        scene.scaleMode = .aspectFit //Set aspect ratio
         
         //Present the screen
         skView.presentScene(scene)

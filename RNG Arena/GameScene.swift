@@ -11,36 +11,34 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-   
+    //Image definitions
+    var background = SKSpriteNode(imageNamed: "background")
+    var hud:SKNode
     
-    override func didMove(to view: SKView) {
-            }
+    //Button definitions
+    var button1 = SKSpriteNode(imageNamed: "Blank")
+    var button2 = SKSpriteNode(imageNamed: "Blank")
+    var button3 = SKSpriteNode(imageNamed: "Blank")
+    var button4 = SKSpriteNode(imageNamed: "Blank")
+
+    //State definitions
+    var scaleFactor:CGFloat
+    var player = Player(health: GKRandomDistribution(lowestValue: 50, highestValue: 100).nextInt())
+    var gameOver:Bool = false
     
+    //Required init because of override init
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
-    func touchDown(atPoint pos : CGPoint) {
+    override init(size:CGSize){
+        super.init(size: size)
         
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-       
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-       
+        backgroundColor = SKColor.orange
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-    }
-    
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
