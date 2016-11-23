@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		E689A7C11DB19BD0000693E6 /* RNG Arena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNG Arena.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E689A7C41DB19BD1000693E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E689A7C41DB19BD1000693E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "RNG Arena/AppDelegate.swift"; sourceTree = "<group>"; };
 		E689A7C61DB19BD1000693E6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		E689A7C81DB19BD1000693E6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		E689A7CA1DB19BD1000693E6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -115,7 +115,6 @@
 		E689A7C31DB19BD0000693E6 /* RNG Arena */ = {
 			isa = PBXGroup;
 			children = (
-				E689A7C41DB19BD1000693E6 /* AppDelegate.swift */,
 				E689A7C61DB19BD1000693E6 /* GameScene.sks */,
 				E689A7C81DB19BD1000693E6 /* Actions.sks */,
 				E689A7CA1DB19BD1000693E6 /* GameScene.swift */,
@@ -146,6 +145,7 @@
 		E6A0C1B41DCC113B003F3F43 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				E689A7C41DB19BD1000693E6 /* AppDelegate.swift */,
 				E689A7D61DB19BD1000693E6 /* Info.plist */,
 				E689A7D11DB19BD1000693E6 /* Assets.xcassets */,
 				E689A7D31DB19BD1000693E6 /* LaunchScreen.storyboard */,

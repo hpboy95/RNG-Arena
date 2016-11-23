@@ -11,19 +11,10 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+   
     
     override func didMove(to view: SKView) {
-        backgroundColor = .orange
-        
-        let ground = SKTexture.init(cgImage: #imageLiteral(resourceName: "Cyclopes") as! CGImage)
-        
-        let page = SKSpriteNode.init(texture: ground, size: CGSize(width: 30, height: 40))
-        
-        page.position = view.center
-        addChild(page)
-    }
+            }
     
     
     func touchDown(atPoint pos : CGPoint) {
