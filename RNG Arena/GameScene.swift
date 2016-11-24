@@ -13,7 +13,11 @@ class GameScene: SKScene {
     
     //Image definitions
     var background = SKSpriteNode(imageNamed: "background")
-    var hud:SKNode
+    
+    //HUD definitions with player score and enemy description
+//    var hud:SKNode
+//    var scoreLabel:SKLabelNode!
+//    var title:SKLabelNode
     
     //Button definitions
     var button1 = SKSpriteNode(imageNamed: "Blank")
@@ -22,9 +26,9 @@ class GameScene: SKScene {
     var button4 = SKSpriteNode(imageNamed: "Blank")
 
     //State definitions
-    var scaleFactor:CGFloat
+    //var scaleFactor:CGFloat
     var player = Player(health: GKRandomDistribution(lowestValue: 50, highestValue: 100).nextInt())
-    var gameOver:Bool = false
+    var gameOver = false
     
     //Required init because of override init
     required init?(coder aDecoder: NSCoder) {

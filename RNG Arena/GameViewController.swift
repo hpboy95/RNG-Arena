@@ -22,7 +22,7 @@ class GameViewController: UIViewController {
         let skView = self.view as! SKView
         
         //Create and configure scene
-        scene = GameScene() //Fill to boundries of the scene
+        //scene = GameScene() //Fill to boundries of the scene
         scene.scaleMode = .aspectFit //Set aspect ratio
         
         //Present the screen
