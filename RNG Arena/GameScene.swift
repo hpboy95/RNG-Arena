@@ -12,7 +12,7 @@ import GameplayKit
 class GameScene: SKScene {
     
     //Image definitions
-    var background = SKSpriteNode(imageNamed: "background")
+    var background: SKNode!
     
     //HUD definitions with player score and enemy description
 //    var hud:SKNode
@@ -26,7 +26,7 @@ class GameScene: SKScene {
     var button4 = SKSpriteNode(imageNamed: "Blank")
 
     //State definitions
-    //var scaleFactor:CGFloat
+    var scaleFactor:CGFloat!
     var player = Player(health: GKRandomDistribution(lowestValue: 50, highestValue: 100).nextInt())
     var gameOver = false
     
@@ -37,8 +37,14 @@ class GameScene: SKScene {
     
     override init(size:CGSize){
         super.init(size: size)
+    
+        scaleFactor = self.size.width / 320
+        backgroundColor = SKColor(colorLiteralRed: 6/255, green: 150/255, blue: 35/255, alpha: 1)
         
-        backgroundColor = SKColor.orange
+        background = createBackground()
+        addChild(background)
+        
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

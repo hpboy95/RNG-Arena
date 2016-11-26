@@ -22,6 +22,7 @@
 		E6A6E2111DDEACE000524604 /* RAPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6E2101DDEACE000524604 /* RAPlayer.swift */; };
 		E6DC562E1DC9A4FB0004EBC1 /* RAEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC562D1DC9A4FB0004EBC1 /* RAEngine.swift */; };
 		E6E1676B1DCBE07B004F2A15 /* RAMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E1676A1DCBE07B004F2A15 /* RAMonster.swift */; };
+		E6EF4EAF1DE92B4A00F0A7D0 /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF4EAE1DE92B4A00F0A7D0 /* GameElements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		E6A6E2101DDEACE000524604 /* RAPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAPlayer.swift; sourceTree = "<group>"; };
 		E6DC562D1DC9A4FB0004EBC1 /* RAEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAEngine.swift; path = "RNG Arena/RAEngine.swift"; sourceTree = "<group>"; };
 		E6E1676A1DCBE07B004F2A15 /* RAMonster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMonster.swift; sourceTree = "<group>"; };
+		E6EF4EAE1DE92B4A00F0A7D0 /* GameElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameElements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				E689A7C61DB19BD1000693E6 /* GameScene.sks */,
 				E689A7C81DB19BD1000693E6 /* Actions.sks */,
 				E689A7CA1DB19BD1000693E6 /* GameScene.swift */,
+				E6EF4EAE1DE92B4A00F0A7D0 /* GameElements.swift */,
 				E689A7CC1DB19BD1000693E6 /* GameViewController.swift */,
 				E689A7CE1DB19BD1000693E6 /* Main.storyboard */,
 			);
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EF4EAF1DE92B4A00F0A7D0 /* GameElements.swift in Sources */,
 				E6E1676B1DCBE07B004F2A15 /* RAMonster.swift in Sources */,
 				E6A6E2111DDEACE000524604 /* RAPlayer.swift in Sources */,
 				E689A7CB1DB19BD1000693E6 /* GameScene.swift in Sources */,
