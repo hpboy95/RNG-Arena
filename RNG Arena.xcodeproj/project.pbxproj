@@ -24,6 +24,7 @@
 		E6DC562E1DC9A4FB0004EBC1 /* RAEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DC562D1DC9A4FB0004EBC1 /* RAEngine.swift */; };
 		E6E1676B1DCBE07B004F2A15 /* RAMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E1676A1DCBE07B004F2A15 /* RAMonster.swift */; };
 		E6EF4EAF1DE92B4A00F0A7D0 /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EF4EAE1DE92B4A00F0A7D0 /* GameElements.swift */; };
+		E6EF4EB11DEAA05400F0A7D0 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6EF4EB01DEAA05400F0A7D0 /* Property List.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E6DC562D1DC9A4FB0004EBC1 /* RAEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAEngine.swift; path = "RNG Arena/RAEngine.swift"; sourceTree = "<group>"; };
 		E6E1676A1DCBE07B004F2A15 /* RAMonster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMonster.swift; sourceTree = "<group>"; };
 		E6EF4EAE1DE92B4A00F0A7D0 /* GameElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameElements.swift; sourceTree = "<group>"; };
+		E6EF4EB01DEAA05400F0A7D0 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		E689A7B81DB19BD0000693E6 = {
 			isa = PBXGroup;
 			children = (
+				E6EF4EB01DEAA05400F0A7D0 /* Property List.plist */,
 				E6A0C1B41DCC113B003F3F43 /* Support Files */,
 				E6DC562F1DC9A5430004EBC1 /* Game Logic */,
 				E689A7C31DB19BD0000693E6 /* RNG Arena */,
@@ -281,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EF4EB11DEAA05400F0A7D0 /* Property List.plist in Resources */,
 				E689A7D01DB19BD1000693E6 /* Main.storyboard in Resources */,
 				E689A7C71DB19BD1000693E6 /* GameScene.sks in Resources */,
 				E689A7D21DB19BD1000693E6 /* Assets.xcassets in Resources */,
