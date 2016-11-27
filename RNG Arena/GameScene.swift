@@ -13,6 +13,7 @@ class GameScene: SKScene {
     
     //Image definitions
     var background: SKNode!
+    var monster: SKNode!
     
     //HUD definitions with player score and enemy description
 //    var hud:SKNode
@@ -41,8 +42,13 @@ class GameScene: SKScene {
         scaleFactor = self.size.width / 320
         backgroundColor = SKColor(colorLiteralRed: 6/255, green: 150/255, blue: 35/255, alpha: 1)
         
+        //Set Images
         background = createBackground()
+        monster = createMonster()
+        
+        //Add images to scene
         addChild(background)
+        addChild(monster)
         
         
     }
