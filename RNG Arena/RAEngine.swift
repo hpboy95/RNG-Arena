@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Engine{
+class RAEngine{
     
     var score: Int
     var highScore: Int
@@ -33,6 +33,12 @@ class Engine{
         let userDefaults = UserDefaults.standard
         
         highScore = userDefaults.integer(forKey: "highScore")
+        
+        if let path = Bundle.main.path(forResource: "Data", ofType: "plist"){
+            if let monster = NSDictionary(contentsOfFile: path){
+                currentData = monster
+            }
+        }
         
     }
     

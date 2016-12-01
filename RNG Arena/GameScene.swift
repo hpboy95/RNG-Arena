@@ -42,6 +42,8 @@ class GameScene: SKScene {
         scaleFactor = self.size.width / 320
         backgroundColor = SKColor(colorLiteralRed: 6/255, green: 150/255, blue: 35/255, alpha: 1)
         
+        let levelData = RAEngine.sharedInstance.levelData
+        
         //Set Images
         background = createBackground()
         monster = createMonster()

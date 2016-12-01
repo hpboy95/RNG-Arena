@@ -2,9 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Monsters</key>
+	<key>MonsterNames</key>
 	<array>
 		<string>Goblin Warrior</string>
+	</array>
+	<key>AbilityNames</key>
+	<array>
+		<string>Fireball</string>
 	</array>
 </dict>
 </plist>
