@@ -101,7 +101,6 @@
 		E689A7B81DB19BD0000693E6 = {
 			isa = PBXGroup;
 			children = (
-				E6A77F6C1DEFE15E00C7E1FC /* Data.plist */,
 				E6A0C1B41DCC113B003F3F43 /* Support Files */,
 				E6DC562F1DC9A5430004EBC1 /* Game Logic */,
 				E689A7C31DB19BD0000693E6 /* RNG Arena */,
@@ -158,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				E689A7C41DB19BD1000693E6 /* AppDelegate.swift */,
+				E6A77F6C1DEFE15E00C7E1FC /* Data.plist */,
 				E689A7D61DB19BD1000693E6 /* Info.plist */,
 				E689A7D11DB19BD1000693E6 /* Assets.xcassets */,
 				E689A7D31DB19BD1000693E6 /* LaunchScreen.storyboard */,

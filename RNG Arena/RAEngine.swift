@@ -12,13 +12,14 @@ class RAEngine{
     
     var score: Int
     var highScore: Int
+    var currentMonster: Monster!
+    var player = Player(100)
+    var levelData: NSDictionary!
     
-    var currentData: NSDictionary!
-    
-    class var sharedInstance: Engine {
+    class var sharedInstance: RAEngine {
         
         struct Singleton{
-            static let instance = Engine()
+            static let instance = RAEngine()
         }
         
         return Singleton.instance
@@ -36,7 +37,7 @@ class RAEngine{
         
         if let path = Bundle.main.path(forResource: "Data", ofType: "plist"){
             if let monster = NSDictionary(contentsOfFile: path){
-                currentData = monster
+                levelData = monster
             }
         }
         

@@ -13,7 +13,7 @@ class GameScene: SKScene {
     
     //Image definitions
     var background: SKNode!
-    var monster: SKNode!
+    var imageMonster: SKNode!
     
     //HUD definitions with player score and enemy description
 //    var hud:SKNode
@@ -46,13 +46,24 @@ class GameScene: SKScene {
         
         //Set Images
         background = createBackground()
-        monster = createMonster()
+        imageMonster = createMonster()
+        
+        let monsterNames = levelData?["MonsterNames"] as! [String]
+        let abilityNames = levelData?["AbilityNames"] as! [String]
+        
+        
+        
         
         //Add images to scene
         addChild(background)
-        addChild(monster)
+        addChild(imageMonster)
         
         
+    }
+    
+    func getRandomIndex(array: [String]) -> Int {
+        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: array.count)
+        return randomNumber
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
