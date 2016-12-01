@@ -5,10 +5,12 @@
 	<key>MonsterNames</key>
 	<array>
 		<string>Goblin Warrior</string>
+		<string>Goblin Scout</string>
 	</array>
 	<key>AbilityNames</key>
 	<array>
 		<string>Fireball</string>
+		<string>Magic Missle</string>
 	</array>
 </dict>
 </plist>
