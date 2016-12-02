@@ -27,6 +27,15 @@ public class Character{
     private var name: String
     private var abilities = [Ability]()
     
+    //Blank Initializer for players
+    init(){
+        
+        self.level = 0
+        self.hp = 100
+        self.name = "Chuck Norris"
+        
+    }
+    
     //Basic initializer with name and abilities
     init(health:Int, name: String){
         
@@ -55,6 +64,10 @@ public class Character{
         
         abilities.append(skill)
         
+    }
+    
+    public func getCurrentHP() -> Int{
+        return hp
     }
     
 }

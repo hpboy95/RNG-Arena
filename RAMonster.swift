@@ -11,6 +11,9 @@ import GameKit
 
 public class Monster: Character {
     
-    
-    
+    let levelData = RAEngine.sharedInstance.levelData
+
+    override init(){
+        super.init(health: 0, name: "blah")
+    }
 }

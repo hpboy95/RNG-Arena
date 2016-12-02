@@ -13,8 +13,11 @@ class RAEngine{
     var score: Int
     var highScore: Int
     var currentMonster: Monster!
-    var player = Player(100)
+    var player = Player(health: 100)
     var levelData: NSDictionary!
+    
+    //        let monsterNames = levelData?["MonsterNames"] as![String]
+    //        let abilityNames = levelData?["AbilityNames"] as! [String]
     
     class var sharedInstance: RAEngine {
         

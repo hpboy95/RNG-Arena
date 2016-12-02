@@ -16,19 +16,19 @@ class GameScene: SKScene {
     var imageMonster: SKNode!
     
     //HUD definitions with player score and enemy description
-//    var hud:SKNode
-//    var scoreLabel:SKLabelNode!
-//    var title:SKLabelNode
+    var hud:SKNode = SKNode()
+    var scoreLabel = SKLabelNode(fontNamed: "AmericanTypewriter-Bold")
+    var playerHP = SKLabelNode(fontNamed: "AmericanTypewriter-Bold")
     
     //Button definitions
-    var button1 = SKSpriteNode(imageNamed: "Blank")
-    var button2 = SKSpriteNode(imageNamed: "Blank")
-    var button3 = SKSpriteNode(imageNamed: "Blank")
-    var button4 = SKSpriteNode(imageNamed: "Blank")
+    var button1: SKSpriteNode!
+    var button2: SKSpriteNode!
+    var button3: SKSpriteNode!
+    var button4: SKSpriteNode!
 
     //State definitions
+    let game = RAEngine()
     var scaleFactor:CGFloat!
-    var player = Player(health: GKRandomDistribution(lowestValue: 50, highestValue: 100).nextInt())
     var gameOver = false
     
     //Required init because of override init
@@ -42,21 +42,46 @@ class GameScene: SKScene {
         scaleFactor = self.size.width / 320
         backgroundColor = SKColor(colorLiteralRed: 6/255, green: 150/255, blue: 35/255, alpha: 1)
         
-        let levelData = RAEngine.sharedInstance.levelData
+        //let levelData = RAEngine.sharedInstance.levelData
+        
+        //Create HUD
+        let xpos = self.size.width / 5
+        let ypos = (self.size.height / 7)
+        
+        button1 = createButton()
+        button2 = createButton()
+        button3 = createButton()
+        button4 = createButton()
+        
+        scoreLabel.fontSize = 26
+        scoreLabel.fontColor = SKColor.black
+        scoreLabel.text = "Score: " + String(game.score)
+        playerHP.fontSize = 26
+        playerHP.fontColor = SKColor.black
+        playerHP.text = "Your Health: " + String(game.player.getCurrentHP())
+        
+        button1.position = CGPoint(x: xpos, y: ypos - 20)
+        button2.position = CGPoint(x: 2 * xpos, y: ypos - 20)
+        button3.position = CGPoint(x: 3 * xpos, y: ypos - 20)
+        button4.position = CGPoint(x: 4 * xpos, y: ypos - 20)
+        scoreLabel.position = CGPoint(x: xpos + 5 , y: ypos * 6 + 20)
+        playerHP.position = CGPoint(x: 2 * xpos, y: ypos * 6 - 20)
+        
+        hud.addChild(button1)
+        hud.addChild(button2)
+        hud.addChild(button3)
+        hud.addChild(button4)
+        hud.addChild(scoreLabel)
+        hud.addChild(playerHP)
         
         //Set Images
         background = createBackground()
         imageMonster = createMonster()
         
-        let monsterNames = levelData?["MonsterNames"] as! [String]
-        let abilityNames = levelData?["AbilityNames"] as! [String]
-        
-        
-        
-        
         //Add images to scene
         addChild(background)
         addChild(imageMonster)
+        addChild(hud)
         
         
     }
@@ -67,6 +92,28 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Loop over all the touches in this event
+        for touch: AnyObject in touches {
+            // Get the location of the touch in this scene
+            let location = touch.location(in: self)
+            // Check if the location of the touch is within the button's bounds
+            if button1.contains(location) {
+                print("tapped1!")
+            }
+            if button2.contains(location) {
+                print("tapped2!")
+            }
+            if button3.contains(location) {
+                print("tapped3!")
+            }
+            if button4.contains(location) {
+                print("tapped4!")
+            }
+        }
+
     }
     
     override func update(_ currentTime: TimeInterval) {

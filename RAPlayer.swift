@@ -11,7 +11,7 @@ import Foundation
 public class Player: Character {
     
     init(health: Int){
-        super.init(health: health, name: "Player")
+        super.init()
     }
     
     

@@ -42,4 +42,13 @@ extension GameScene {
         return monster
     }
     
+    func createButton() -> SKSpriteNode {
+        
+        let randNum = GKRandomDistribution(lowestValue: 0, highestValue: 99).nextInt()
+        
+        let button = SKSpriteNode(imageNamed: String(format:"icon_%02d", randNum))
+        button.setScale(0.15)
+        return button
+    }
+    
 }
