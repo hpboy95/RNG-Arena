@@ -11,14 +11,22 @@ import Foundation
 public struct Ability {
     
     private var name: String
+    private var dmg: Int
     
-    public init(_ title: String){
+    public init(_ title: String, _ dmg: Int){
         self.name = title
+        self.dmg = dmg
     }
     
-    public func deal_damage(char: Monster){
+    public init(){
+        name = "blank"
+        dmg = 0
+    }
+    
+    //char1 deals damage to char2
+    public func deal_damage(char1: Character){
         
-        
+        char1.take_damage(damage: dmg)
         
     }
     

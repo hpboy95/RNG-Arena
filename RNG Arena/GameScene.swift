@@ -42,6 +42,7 @@ class GameScene: SKScene {
         scaleFactor = self.size.width / 320
         backgroundColor = SKColor(colorLiteralRed: 6/255, green: 150/255, blue: 35/255, alpha: 1)
         
+        
         //let levelData = RAEngine.sharedInstance.levelData
         
         //Create HUD
@@ -54,10 +55,10 @@ class GameScene: SKScene {
         button4 = createButton()
         
         scoreLabel.fontSize = 26
-        scoreLabel.fontColor = SKColor.black
+        scoreLabel.fontColor = SKColor.white
         scoreLabel.text = "Score: " + String(game.score)
         playerHP.fontSize = 26
-        playerHP.fontColor = SKColor.black
+        playerHP.fontColor = SKColor.white
         playerHP.text = "Your Health: " + String(game.player.getCurrentHP())
         
         button1.position = CGPoint(x: xpos, y: ypos - 20)

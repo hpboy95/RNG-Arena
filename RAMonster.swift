@@ -15,5 +15,8 @@ public class Monster: Character {
 
     override init(){
         super.init(health: 0, name: "blah")
+        
     }
+    
+    
 }

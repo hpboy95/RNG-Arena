@@ -25,7 +25,10 @@ public class Character{
     private var level: Int
     private var hp: Int
     private var name: String
-    private var abilities = [Ability]()
+    private var ability1: Ability!
+    private var ability2: Ability!
+    private var ability3: Ability!
+    private var ability4: Ability!
     
     //Blank Initializer for players
     init(){
@@ -62,7 +65,7 @@ public class Character{
     //Adds to the Dictionary of abilities
     public func add_ability(skill: Ability, name: String){
         
-        abilities.append(skill)
+      
         
     }
     
@@ -70,4 +73,35 @@ public class Character{
         return hp
     }
     
+    public func getAbility(number: Int) -> Ability {
+        switch number {
+            case 1:
+                return ability1
+            case 2:
+                return ability2
+            case 3:
+                return ability3
+            case 4:
+                return ability4
+            default:
+                return ability1
+        }
+    }
+    
+    public func setAbility(ability: Ability, number: Int){
+        switch number {
+        case 1:
+            ability1 = ability
+        case 2:
+            ability2 = ability
+        case 3:
+            ability3 = ability
+        case 4:
+            ability4 = ability
+        default:
+            print(-1)
+        }
+        
+    }
+
 }
