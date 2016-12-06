@@ -33,6 +33,7 @@ class RAEngine{
     init(){
         score = 0
         highScore = 0
+        currentMonster = Monster()
         
         let userDefaults = UserDefaults.standard
         

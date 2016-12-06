@@ -62,13 +62,6 @@ public class Character{
         
     }
     
-    //Adds to the Dictionary of abilities
-    public func add_ability(skill: Ability, name: String){
-        
-      
-        
-    }
-    
     public func getCurrentHP() -> Int{
         return hp
     }
