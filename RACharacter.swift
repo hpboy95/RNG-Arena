@@ -48,6 +48,10 @@ public class Character{
         
     }
     
+    public func setName(_ name: String){
+        self.name = name
+    }
+    
     //Deals damage by subtracting from current hp
     public func take_damage(damage: Int){
         

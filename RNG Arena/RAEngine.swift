@@ -15,6 +15,8 @@ class RAEngine{
     var currentMonster: Monster!
     var player = Player(health: 100)
     var levelData: NSDictionary!
+    var monsterNames: [String]!
+    var abilityNames: [NSDictionary]!
     
     //        let monsterNames = levelData?["MonsterNames"] as![String]
     //        let abilityNames = levelData?["AbilityNames"] as! [String]
@@ -29,11 +31,24 @@ class RAEngine{
         
     }
     
-    
     init(){
         score = 0
         highScore = 0
-        currentMonster = Monster()
+        
+        let userDefaults = UserDefaults.standard
+        
+        highScore = userDefaults.integer(forKey: "highScore")
+        
+        if let path = Bundle.main.path(forResource: "Data", ofType: "plist"){
+            if let monster = NSDictionary(contentsOfFile: path){
+                levelData = monster
+            }
+        }
+    }
+    
+    init(_ monsterNames: [String], _ abilityNames: [NSArray]){
+        score = 0
+        highScore = 0
         
         let userDefaults = UserDefaults.standard
         
@@ -58,5 +73,8 @@ class RAEngine{
         
     }
 
+    func getNewMonster(){
+        currentMonster = Monster(names: monsterNames, abilityData: abilityNames)
+    }
     
 }
