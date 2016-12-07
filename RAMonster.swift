@@ -25,12 +25,20 @@ public class Monster: Character {
     
     func setMonster() {
         
-        let name = names[getRandomIndex(array: names as NSArray)]
+        let rand1 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count).nextInt()
+        let rand2 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count).nextInt()
+        let rand3 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count).nextInt()
+        let rand4 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count).nextInt()
+        let rand5 = GKRandomDistribution(lowestValue: 0, highestValue: names.count).nextInt()
         
-        let data1 = abilityData[getRandomIndex(array: abilityData as NSArray)]
-        let data2 = abilityData[getRandomIndex(array: abilityData as NSArray)]
-        let data3 = abilityData[getRandomIndex(array: abilityData as NSArray)]
-        let data4 = abilityData[getRandomIndex(array: abilityData as NSArray)]
+        let name = names[rand5]
+        
+        
+        
+        let data1 = abilityData[rand1]
+        let data2 = abilityData[rand2]
+        let data3 = abilityData[rand3]
+        let data4 = abilityData[rand4]
         
         let ability1 = Ability(data1.object(forKey: "Name") as! String, data1.object(forKey: "Damage") as! Int)
         let ability2 = Ability(data2.object(forKey: "Name") as! String, data2.object(forKey: "Damage") as! Int)
@@ -45,10 +53,7 @@ public class Monster: Character {
         
     }
     
-    func getRandomIndex(array: NSArray) -> Int {
-        let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: array.count)
-        return randomNumber
-    }
+    
     
     
 }

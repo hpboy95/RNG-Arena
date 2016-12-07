@@ -46,9 +46,12 @@ class RAEngine{
         }
     }
     
-    init(_ monsterNames: [String], _ abilityNames: [NSArray]){
+    init(_ monsterNames: [String], _ abilityNames: [NSDictionary]){
         score = 0
         highScore = 0
+        self.monsterNames = monsterNames
+        self.abilityNames = abilityNames
+        
         
         let userDefaults = UserDefaults.standard
         

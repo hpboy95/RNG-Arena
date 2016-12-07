@@ -47,12 +47,13 @@ class GameScene: SKScene {
         scaleFactor = self.size.width / 320
         backgroundColor = SKColor(colorLiteralRed: 6/255, green: 150/255, blue: 35/255, alpha: 1)
         
-        let monsterNames = levelData?["MonsterNames"] as! [String]
-        let abilityNames = levelData?["AbilityNames"] as! [NSDictionary]
+        monsterNames = levelData?["MonsterNames"] as! [String]
+        abilityNames = levelData?["AbilityNames"] as! [NSDictionary]
         
         
-//        game = RAEngine(monsterNames, abilityNames)
-//        game.getNewMonster()
+        game = RAEngine(monsterNames, abilityNames)
+        game.getNewMonster()
+        game.currentMonster.setMonster()
         
         //Create HUD
         let xpos = self.size.width / 5
@@ -65,10 +66,10 @@ class GameScene: SKScene {
         
         scoreLabel.fontSize = 26
         scoreLabel.fontColor = SKColor.white
-        //scoreLabel.text = "Score: " + String(game.score)
+        scoreLabel.text = "Score: " + String(game.score)
         playerHP.fontSize = 26
         playerHP.fontColor = SKColor.white
-        //playerHP.text = "Your Health: " + String(game.player.getCurrentHP())
+        playerHP.text = "Your Health: " + String(game.player.getCurrentHP())
         
         button1.position = CGPoint(x: xpos, y: ypos - 20)
         button2.position = CGPoint(x: 2 * xpos, y: ypos - 20)
@@ -111,7 +112,7 @@ class GameScene: SKScene {
             let location = touch.location(in: self)
             // Check if the location of the touch is within the button's bounds
             if button1.contains(location) {
-                print(monsterNames.count)
+                print("tapped1")
             }
             if button2.contains(location) {
                 print("tapped2!")
