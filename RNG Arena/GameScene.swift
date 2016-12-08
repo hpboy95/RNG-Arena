@@ -210,18 +210,36 @@ class GameScene: SKScene {
                 }
             }
             if button3.contains(location) && !button3.isHidden {
-                game.dealDamage(true, 3)
-                actionLabel.text = "You cast " + game.player.getAbility(number: 1).name + " for " + String(game.player.getAbility(number: 1).dmg)
-                delay(delay: 2.0){
-                    self.actionLabel.text = ""
+                if(choosing){
+                    game.addAbility(skill: abilityChoices[abilityChoice], num: 3)
+                    button3.texture = image1
+                    actionLabel.text = ""
+                    choosing = false
                 }
+                else {
+                    game.dealDamage(true, 2)
+                    actionLabel.text = "You cast " + game.player.getAbility(number: 3).name + " for " + String(game.player.getAbility(number: 3).dmg)
+                    delay(delay: 2.0){
+                        self.actionLabel.text = ""
+                    }
+                }
+
             }
             if button4.contains(location) && !button4.isHidden {
-                game.dealDamage(true, 4)
-                actionLabel.text = "You cast " + game.player.getAbility(number: 1).name + " for " + String(game.player.getAbility(number: 1).dmg)
-                delay(delay: 2.0){
-                    self.actionLabel.text = ""
+                if(choosing){
+                    game.addAbility(skill: abilityChoices[abilityChoice], num: 4)
+                    button4.texture = image1
+                    actionLabel.text = ""
+                    choosing = false
                 }
+                else {
+                    game.dealDamage(true, 2)
+                    actionLabel.text = "You cast " + game.player.getAbility(number: 4).name + " for " + String(game.player.getAbility(number: 4).dmg)
+                    delay(delay: 2.0){
+                        self.actionLabel.text = ""
+                    }
+                }
+
             }
             if button5.contains(location) && !button5.isHidden {
                 image1 = button5.texture
