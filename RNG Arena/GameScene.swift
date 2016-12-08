@@ -39,6 +39,7 @@ class GameScene: SKScene {
     var button5: SKSpriteNode!
     var button6: SKSpriteNode!
     var button7: SKSpriteNode!
+    var button8: SKSpriteNode!
 
     //Save textures
     var imageSave: SKTexture!
@@ -50,6 +51,7 @@ class GameScene: SKScene {
     var gameover = false
     var choosing = false
     var isDead = false
+    var heal = false
     var aiTurn = true
         
     //Required init because of override init
@@ -88,6 +90,8 @@ class GameScene: SKScene {
         button5 = createButton()
         button6 = createButton()
         button7 = createButton()
+        button8 = SKSpriteNode(imageNamed: "Heart")
+        button8.setScale(0.15)
         
         //Player score label
         scoreLabel.fontSize = 20
@@ -130,14 +134,16 @@ class GameScene: SKScene {
         button2.position = CGPoint(x: 2 * xpos, y: ypos - 20)
         button3.position = CGPoint(x: 3 * xpos, y: ypos - 20)
         button4.position = CGPoint(x: 4 * xpos, y: ypos - 20)
-        button5.position = CGPoint(x: 3 * HUDxpos, y: ypos - 20)
-        button6.position = CGPoint(x: 5 * HUDxpos, y: ypos - 20)
-        button7.position = CGPoint(x: 7 * HUDxpos, y: ypos - 20)
+        button5.position = CGPoint(x: 2 * xpos, y: ypos - 20)
+        button6.position = CGPoint(x: 3 * xpos, y: ypos - 20)
+        button7.position = CGPoint(x: 4 * xpos, y: ypos - 20)
+        button8.position = CGPoint(x: xpos, y: ypos - 20)
 
         //Hide choose buttons
         button5.isHidden = true
         button6.isHidden = true
         button7.isHidden = true
+        button8.isHidden = true
         
         scoreLabel.position = CGPoint(x: 2 * HUDxpos, y: HUDypos * 9)
         playerHP.position = CGPoint(x: 4 * HUDxpos, y: HUDypos * 9)
@@ -154,6 +160,7 @@ class GameScene: SKScene {
         hud.addChild(button5)
         hud.addChild(button6)
         hud.addChild(button7)
+        hud.addChild(button8)
         hud.addChild(scoreLabel)
         hud.addChild(playerHP)
         hud.addChild(monsterName)
@@ -270,6 +277,18 @@ class GameScene: SKScene {
                 abilityChoice = 2
                 choose()
             }
+            if button8.contains(location) && !button8.isHidden {
+                let randNum = GKRandomDistribution(lowestValue: 5, highestValue: 25).nextInt()
+                heal = true
+                game.player.modHP(num: randNum)
+                actionLabel.text = "Healed for " + String(randNum)
+                delay(delay: 2.0){
+                    self.actionLabel.text = ""
+                }
+                playerHP.text = "Your Health: " + String(game.player.getCurrentHP())
+                choosing = false
+                choose()
+            }
 
             if game.currentMonster.getCurrentHP() <= 0 {
                 
@@ -308,9 +327,6 @@ class GameScene: SKScene {
             let randNum = GKRandomDistribution(lowestValue: 0, highestValue: 4).nextInt()
             game.dealDamage(false, randNum)
             actionLabel2.text = game.currentMonster.getName() + " cast " + game.currentMonster.getAbility(number: randNum).name + " for " + String(game.currentMonster.getAbility(number: randNum).dmg)
-            delay(delay: 2.0){
-                self.actionLabel2.text = ""
-            }
             
             aiTurn = false
             
@@ -339,17 +355,21 @@ class GameScene: SKScene {
         button5.isHidden = false
         button6.isHidden = false
         button7.isHidden = false
+        button8.isHidden = false
         
     }
     
     func choose() {
         
         abilityChoices = game.chooseThree()
+        if (!heal){
+            actionLabel.text = "Pick an Ability to Replace"
+        }
         
-        actionLabel.text = "Pick an Ability to Replace"
         button5.isHidden = true
         button6.isHidden = true
         button7.isHidden = true
+        button8.isHidden = true
         
         button5.texture = resetButton()
         button6.texture = resetButton()
@@ -360,10 +380,12 @@ class GameScene: SKScene {
         button3.isHidden = false
         button4.isHidden = false
         
+        heal = false
+        
     }
     
     func endGame(){
-        print(game.score)
+        RAEngine.sharedInstance.score = game.score
         gameover = true
         game.saveGameStats()
         let transition = SKTransition.fade(withDuration: 0.5)
