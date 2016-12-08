@@ -70,7 +70,7 @@ class RAEngine{
             player.take_damage(skill: tmp, char: currentMonster)
         default:
             let tmp = currentMonster.getAbility(number: abilityNumber)
-            currentMonster.take_damage(skill: tmp, char: currentMonster)
+            currentMonster.take_damage(skill: tmp, char: player)
         }
     }
     

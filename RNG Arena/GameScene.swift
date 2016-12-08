@@ -29,6 +29,7 @@ class GameScene: SKScene {
     var monsterName = SKLabelNode(fontNamed: "AmericanTypewriter-Bold")
     var monsterHP = SKLabelNode(fontNamed: "AmericanTypewriter-Bold")
     var actionLabel = SKLabelNode(fontNamed: "AmericanTypewriter-Bold")
+    var actionLabel2 = SKLabelNode(fontNamed: "AmericanTypewriter-Bold")
     
     //Button definitions
     var button1: SKSpriteNode!
@@ -49,6 +50,7 @@ class GameScene: SKScene {
     var gameover = false
     var choosing = false
     var isDead = false
+    var aiTurn = true
         
     //Required init because of override init
     required init?(coder aDecoder: NSCoder) {
@@ -111,11 +113,17 @@ class GameScene: SKScene {
         monsterHP.text = "Enemy Health: " + String(game.currentMonster.getCurrentHP())
         monsterHP.horizontalAlignmentMode = .center
         
-        //Action Label
-        actionLabel.fontSize = 20
+        //Action Label 1
+        actionLabel.fontSize = 15
         actionLabel.fontColor = SKColor.white
         actionLabel.text = ""
         actionLabel.horizontalAlignmentMode = .center
+        
+        //Action Label 2
+        actionLabel2.fontSize = 15
+        actionLabel2.fontColor = SKColor.white
+        actionLabel2.text = ""
+        actionLabel2.horizontalAlignmentMode = .center
         
         //Set HUD positions
         button1.position = CGPoint(x: xpos, y: ypos - 20)
@@ -134,8 +142,9 @@ class GameScene: SKScene {
         scoreLabel.position = CGPoint(x: 2 * HUDxpos, y: HUDypos * 9)
         playerHP.position = CGPoint(x: 4 * HUDxpos, y: HUDypos * 9)
         monsterName.position = CGPoint(x: xcenter, y: (HUDypos * 8) + 10)
-        monsterHP.position = CGPoint(x: xcenter, y: (HUDypos * 8) - 10)
+        monsterHP.position = CGPoint(x: xcenter, y: (HUDypos * 8) + 30)
         actionLabel.position = CGPoint(x: xcenter, y: ypos + 20)
+        actionLabel2.position = CGPoint(x: xcenter, y: (HUDypos * 8) - 10)
         
         //Add all components to the HUD
         hud.addChild(button1)
@@ -150,6 +159,7 @@ class GameScene: SKScene {
         hud.addChild(monsterName)
         hud.addChild(monsterHP)
         hud.addChild(actionLabel)
+        hud.addChild(actionLabel2)
         
         //Set Images
         background = createBackground()
@@ -191,6 +201,7 @@ class GameScene: SKScene {
                     delay(delay: 2.0){
                         self.actionLabel.text = ""
                     }
+                    aiTurn = true
                 }
                 
             }
@@ -207,6 +218,7 @@ class GameScene: SKScene {
                     delay(delay: 2.0){
                         self.actionLabel.text = ""
                     }
+                    aiTurn = true
                 }
             }
             if button3.contains(location) && !button3.isHidden {
@@ -222,6 +234,7 @@ class GameScene: SKScene {
                     delay(delay: 2.0){
                         self.actionLabel.text = ""
                     }
+                    aiTurn = true
                 }
 
             }
@@ -238,6 +251,7 @@ class GameScene: SKScene {
                     delay(delay: 2.0){
                         self.actionLabel.text = ""
                     }
+                    aiTurn = true
                 }
 
             }
@@ -280,6 +294,7 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
+        
         // Called before each frame is rendered
         if (gameover){
             endGame()
@@ -287,6 +302,23 @@ class GameScene: SKScene {
         if (isDead) {
             isDead = false
             loot()
+        }
+        if (aiTurn) {
+            
+            let randNum = GKRandomDistribution(lowestValue: 0, highestValue: 4).nextInt()
+            game.dealDamage(false, randNum)
+            actionLabel2.text = game.currentMonster.getName() + " cast " + game.currentMonster.getAbility(number: randNum).name + " for " + String(game.currentMonster.getAbility(number: randNum).dmg)
+            delay(delay: 2.0){
+                self.actionLabel2.text = ""
+            }
+            
+            aiTurn = false
+            
+            playerHP.text = "Your Health: " + String(game.player.getCurrentHP())
+            
+            if(game.player.getCurrentHP() <= 0){
+                endGame()
+            }
         }
         
         
@@ -331,6 +363,7 @@ class GameScene: SKScene {
     }
     
     func endGame(){
+        print(game.score)
         gameover = true
         game.saveGameStats()
         let transition = SKTransition.fade(withDuration: 0.5)
