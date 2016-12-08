@@ -40,11 +40,13 @@ public class Character{
     }
     
     //Basic initializer with name and abilities
-    init(health:Int, name: String){
+    init(health:Int){
         
-        self.level = GKRandomDistribution(lowestValue: 1, highestValue: 10).nextInt()
-        self.hp = health * Int(level)
-        self.name = name
+        let tmpNum = GKRandomDistribution(lowestValue: 1, highestValue: 10).nextInt()
+        
+        self.level = tmpNum
+        self.hp = health * Int(tmpNum)
+        self.name = ""
         
     }
     
@@ -57,16 +59,16 @@ public class Character{
     }
     
     //Deals damage by subtracting from current hp
-    public func take_damage(damage: Int){
+    public func take_damage(skill: Ability, char: Character){
         
-        hp = hp - damage
+        skill.deal_damage(char1: char)
         
     }
     
     //Heals a unit by adding to the current hp
-    public func heal(heal: Int){
+    public func modHP(num: Int){
         
-        hp = hp + heal
+        hp = hp - num
         
     }
     

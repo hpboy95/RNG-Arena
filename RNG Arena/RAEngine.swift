@@ -7,19 +7,17 @@
 //
 
 import Foundation
+import GameKit
 
 class RAEngine{
     
     var score: Int
     var highScore: Int
     var currentMonster: Monster!
-    var player = Player(health: 100)
+    var player: Player!
     var levelData: NSDictionary!
     var monsterNames: [String]!
     var abilityNames: [NSDictionary]!
-    
-    //        let monsterNames = levelData?["MonsterNames"] as![String]
-    //        let abilityNames = levelData?["AbilityNames"] as! [String]
     
     class var sharedInstance: RAEngine {
         
@@ -51,7 +49,7 @@ class RAEngine{
         highScore = 0
         self.monsterNames = monsterNames
         self.abilityNames = abilityNames
-        
+        player = Player(abilityData: abilityNames)
         
         let userDefaults = UserDefaults.standard
         
@@ -63,6 +61,17 @@ class RAEngine{
             }
         }
         
+    }
+    
+    func dealDamage(_ isPlayer: Bool,_ abilityNumber: Int) {
+        switch isPlayer {
+        case true:
+            let tmp = player.getAbility(number: abilityNumber)
+            player.take_damage(skill: tmp, char: currentMonster)
+        default:
+            let tmp = currentMonster.getAbility(number: abilityNumber)
+            currentMonster.take_damage(skill: tmp, char: currentMonster)
+        }
     }
     
     func saveGameStats(){
@@ -78,6 +87,29 @@ class RAEngine{
 
     func getNewMonster(){
         currentMonster = Monster(names: monsterNames, abilityData: abilityNames)
+        currentMonster.setMonster()
+    }
+    
+    func addAbility(skill: Ability, num: Int){
+        player.setAbility(ability: skill, number: num)
+    }
+    
+    func chooseThree(num: Int) -> [Ability] {
+        
+        var selectArray = [Ability]()
+        let count = 3
+        while count < 3 {
+            let rand1 = GKRandomDistribution(lowestValue: 0, highestValue: abilityNames.count - 1).nextInt()
+
+            let data1 = abilityNames[rand1]
+            
+            let ability1 = Ability(data1.object(forKey: "Name") as! String, data1.object(forKey: "Damage") as! Int)
+            selectArray.append(ability1)
+
+        }
+        
+        return selectArray
+        
     }
     
 }

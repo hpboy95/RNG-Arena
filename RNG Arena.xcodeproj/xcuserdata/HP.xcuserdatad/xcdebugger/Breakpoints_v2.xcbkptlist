@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RACharacter.swift"
-            timestampString = "502822773.752448"
+            timestampString = "502834377.740483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "setAbility(ability:number:)"
             landmarkType = "7">
          </BreakpointContent>

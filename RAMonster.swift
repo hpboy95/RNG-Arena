@@ -19,17 +19,17 @@ public class Monster: Character {
     
         self.names = names
         self.abilityData = abilityData
-        super.init()
+        super.init(health: 20)
     
     }
     
     func setMonster() {
         
-        let rand1 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count).nextInt()
-        let rand2 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count).nextInt()
-        let rand3 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count).nextInt()
-        let rand4 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count).nextInt()
-        let rand5 = GKRandomDistribution(lowestValue: 0, highestValue: names.count).nextInt()
+        let rand1 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count - 1).nextInt()
+        let rand2 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count - 1).nextInt()
+        let rand3 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count - 1).nextInt()
+        let rand4 = GKRandomDistribution(lowestValue: 0, highestValue: abilityData.count - 1).nextInt()
+        let rand5 = GKRandomDistribution(lowestValue: 0, highestValue: names.count - 1).nextInt()
         
         let name = names[rand5]
         
