@@ -40,7 +40,7 @@ class GameScene: SKScene {
     var button7: SKSpriteNode!
 
     //Save textures
-    var image1: SKTexture!
+    var imageSave: SKTexture!
     var blank = SKTexture(imageNamed: "Blank")
     
     //State definitions
@@ -48,7 +48,7 @@ class GameScene: SKScene {
     var scaleFactor:CGFloat!
     var gameover = false
     var choosing = false
-    var isDead = true
+    var isDead = false
         
     //Required init because of override init
     required init?(coder aDecoder: NSCoder) {
@@ -180,8 +180,8 @@ class GameScene: SKScene {
             // Check if the location of the touch is within the button's bounds
             if button1.contains(location) && !button1.isHidden {
                 if(choosing){
-                    game.addAbility(skill: abilityChoices[abilityChoice], num: 2)
-                    button2.texture = image1
+                    game.addAbility(skill: abilityChoices[abilityChoice], num: 1)
+                    button1.texture = imageSave
                     actionLabel.text = ""
                     choosing = false
                 }
@@ -197,7 +197,7 @@ class GameScene: SKScene {
             if button2.contains(location) && !button2.isHidden {
                 if(choosing){
                     game.addAbility(skill: abilityChoices[abilityChoice], num: 2)
-                    button2.texture = image1
+                    button2.texture = imageSave
                     actionLabel.text = ""
                     choosing = false
                 }
@@ -212,12 +212,12 @@ class GameScene: SKScene {
             if button3.contains(location) && !button3.isHidden {
                 if(choosing){
                     game.addAbility(skill: abilityChoices[abilityChoice], num: 3)
-                    button3.texture = image1
+                    button3.texture = imageSave
                     actionLabel.text = ""
                     choosing = false
                 }
                 else {
-                    game.dealDamage(true, 2)
+                    game.dealDamage(true, 3)
                     actionLabel.text = "You cast " + game.player.getAbility(number: 3).name + " for " + String(game.player.getAbility(number: 3).dmg)
                     delay(delay: 2.0){
                         self.actionLabel.text = ""
@@ -228,12 +228,12 @@ class GameScene: SKScene {
             if button4.contains(location) && !button4.isHidden {
                 if(choosing){
                     game.addAbility(skill: abilityChoices[abilityChoice], num: 4)
-                    button4.texture = image1
+                    button4.texture = imageSave
                     actionLabel.text = ""
                     choosing = false
                 }
                 else {
-                    game.dealDamage(true, 2)
+                    game.dealDamage(true, 4)
                     actionLabel.text = "You cast " + game.player.getAbility(number: 4).name + " for " + String(game.player.getAbility(number: 4).dmg)
                     delay(delay: 2.0){
                         self.actionLabel.text = ""
@@ -242,22 +242,22 @@ class GameScene: SKScene {
 
             }
             if button5.contains(location) && !button5.isHidden {
-                image1 = button5.texture
+                imageSave = button5.texture
                 abilityChoice = 0
                 choose()
             }
             if button6.contains(location) && !button6.isHidden {
-                image1 = button5.texture
+                imageSave = button6.texture
                 abilityChoice = 1
                 choose()
             }
             if button7.contains(location) && !button7.isHidden {
-                image1 = button5.texture
+                imageSave = button7.texture
                 abilityChoice = 2
                 choose()
             }
 
-            if game.currentMonster.getCurrentHP() < 0 {
+            if game.currentMonster.getCurrentHP() <= 0 {
                 
                 isDead = true
                 game.getNewMonster()
@@ -295,6 +295,8 @@ class GameScene: SKScene {
     
     func loot() {
         
+        actionLabel.text = "Select a new ability"
+        
         choosing = true
         
         button1.isHidden = true
@@ -310,10 +312,16 @@ class GameScene: SKScene {
     
     func choose() {
         
+        abilityChoices = game.chooseThree()
+        
         actionLabel.text = "Pick an Ability to Replace"
         button5.isHidden = true
         button6.isHidden = true
         button7.isHidden = true
+        
+        button5.texture = resetButton()
+        button6.texture = resetButton()
+        button7.texture = resetButton()
         
         button1.isHidden = false
         button2.isHidden = false

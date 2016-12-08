@@ -54,6 +54,15 @@ extension GameScene {
         
     }
     
+    func resetButton() -> SKTexture {
+        
+        let randNum = GKRandomDistribution(lowestValue: 0, highestValue: 99).nextInt()
+        
+        let button = SKTexture(imageNamed: String(format:"icon_%02d", randNum))
+        return button
+
+    }
+    
     func createButton() -> SKSpriteNode {
         
         let randNum = GKRandomDistribution(lowestValue: 0, highestValue: 99).nextInt()
