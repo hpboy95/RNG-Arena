@@ -94,7 +94,7 @@ class RAEngine{
         player.setAbility(ability: skill, number: num)
     }
     
-    func chooseThree(num: Int) -> [Ability] {
+    func chooseThree() -> [Ability] {
         
         var selectArray = [Ability]()
         var count = 0
