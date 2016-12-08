@@ -9,10 +9,12 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class GameViewController: UIViewController {
 
     var scene: GameScene!
+    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         
@@ -27,6 +29,16 @@ class GameViewController: UIViewController {
         
         //Present the screen
         skView.presentScene(scene)
+        
+        //Background Music
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "RetroHeroes", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        }
+        catch {
+            print(error)
+        }
         
     }
 
@@ -50,4 +62,17 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    // Turn music on/off.
+    @IBAction func mute(_ sender: UIButton) {
+        if audioPlayer.isPlaying {
+            audioPlayer.pause()
+            sender.setTitle("🔇", for: .normal)
+        }
+        else {
+            audioPlayer.play()
+            sender.setTitle("🔈", for: .normal)
+        }
+    }
+    
 }
