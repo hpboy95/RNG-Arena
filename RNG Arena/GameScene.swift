@@ -47,7 +47,7 @@ class GameScene: SKScene {
     var scaleFactor:CGFloat!
     var gameover = false
     var choosing = false
-    var isDead = true
+    var isDead = false
         
     //Required init because of override init
     required init?(coder aDecoder: NSCoder) {
@@ -167,7 +167,7 @@ class GameScene: SKScene {
             // Get the location of the touch in this scene
             let location = touch.location(in: self)
             // Check if the location of the touch is within the button's bounds
-            if button1.contains(location) {
+            if button1.contains(location) && !button1.isHidden {
                 game.dealDamage(true, 1)
                 actionLabel.text = "You cast " + game.player.getAbility(number: 1).name + " for " + String(game.player.getAbility(number: 1).dmg)
                 delay(delay: 2.0){
@@ -175,13 +175,13 @@ class GameScene: SKScene {
                 }
                 
             }
-            if button2.contains(location) {
+            if button2.contains(location) && !button2.isHidden {
                 game.dealDamage(true, 2)
             }
-            if button3.contains(location) {
+            if button3.contains(location) && !button3.isHidden {
                 game.dealDamage(true, 3)
             }
-            if button4.contains(location) {
+            if button4.contains(location) && !button4.isHidden {
                 game.dealDamage(true, 4)
                 
             }

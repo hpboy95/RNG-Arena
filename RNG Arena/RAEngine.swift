@@ -97,14 +97,17 @@ class RAEngine{
     func chooseThree(num: Int) -> [Ability] {
         
         var selectArray = [Ability]()
-        let count = 3
+        var count = 0
         while count < 3 {
+            
             let rand1 = GKRandomDistribution(lowestValue: 0, highestValue: abilityNames.count - 1).nextInt()
 
             let data1 = abilityNames[rand1]
             
             let ability1 = Ability(data1.object(forKey: "Name") as! String, data1.object(forKey: "Damage") as! Int)
             selectArray.append(ability1)
+            
+            count += 1
 
         }
         
