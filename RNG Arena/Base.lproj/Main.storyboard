@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,9 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4a-QG-lnR">
-                                <frame key="frameInset" minX="339" minY="160" width="29" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4a-QG-lnR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="RHz-Lh-jvb"/>
+                                </constraints>
                                 <state key="normal" title="🔈"/>
                                 <connections>
                                     <action selector="mute:" destination="BV1-FR-VrT" eventType="touchUpInside" id="LRU-YI-dJ3"/>
@@ -28,6 +30,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z4a-QG-lnR" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="140" id="Lb2-Rg-Vmf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z4a-QG-lnR" secondAttribute="trailing" constant="-9" id="XZe-EV-SSn"/>
+                            <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="Z4a-QG-lnR" secondAttribute="bottom" constant="472" id="fSM-GK-Ga2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -96,43 +103,49 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArenaBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ty4-vp-NQE"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-C6-5mO">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <state key="normal" title="Start Game"/>
                                 <connections>
                                     <segue destination="BV1-FR-VrT" kind="show" id="6Ia-8s-bHl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09C-au-JvV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="KHl-cY-Liv">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DGj-Qc-j4v"/>
-                                    <constraint firstAttribute="width" constant="84" id="XW3-TI-KH8"/>
+                                    <constraint firstAttribute="height" constant="63" id="bdb-jN-w3h"/>
                                 </constraints>
-                                <state key="normal" title="High Scores"/>
-                                <connections>
-                                    <action selector="highScore:" destination="vEh-BC-YYe" eventType="touchUpInside" id="CH6-gM-OQl"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="KHl-cY-Liv">
-                                <frame key="frameInset" minX="102" minY="13" width="190" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbY-5g-RaF">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <state key="normal" title="Credits"/>
                                 <connections>
                                     <segue destination="Ldj-Te-CIh" kind="show" id="m2e-Fi-Efs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09C-au-JvV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DGj-Qc-j4v"/>
+                                    <constraint firstAttribute="width" constant="164" id="XW3-TI-KH8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" title="High Scores"/>
+                                <connections>
+                                    <action selector="highScore:" destination="vEh-BC-YYe" eventType="touchUpInside" id="CH6-gM-OQl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="zbY-5g-RaF" firstAttribute="centerX" secondItem="ty4-vp-NQE" secondAttribute="centerX" id="5aW-fD-48F"/>
+                            <constraint firstItem="KHl-cY-Liv" firstAttribute="leading" secondItem="N9b-s0-Edh" secondAttribute="leadingMargin" constant="86" id="26F-7I-veu"/>
                             <constraint firstItem="09C-au-JvV" firstAttribute="centerX" secondItem="N9b-s0-Edh" secondAttribute="centerX" id="AXw-8C-qkU"/>
                             <constraint firstItem="ty4-vp-NQE" firstAttribute="centerY" secondItem="h3z-C6-5mO" secondAttribute="centerY" id="C7d-jP-Sow"/>
                             <constraint firstItem="ty4-vp-NQE" firstAttribute="top" secondItem="N9b-s0-Edh" secondAttribute="top" id="Ew7-dT-TXN"/>
                             <constraint firstItem="h3z-C6-5mO" firstAttribute="centerY" secondItem="N9b-s0-Edh" secondAttribute="centerY" id="GdV-bS-A7R"/>
                             <constraint firstItem="h3z-C6-5mO" firstAttribute="centerX" secondItem="N9b-s0-Edh" secondAttribute="centerX" id="JZq-DY-3Bx"/>
                             <constraint firstItem="ty4-vp-NQE" firstAttribute="leading" secondItem="N9b-s0-Edh" secondAttribute="leading" id="UDk-eE-ARc"/>
-                            <constraint firstItem="zbY-5g-RaF" firstAttribute="top" secondItem="09C-au-JvV" secondAttribute="bottom" constant="39" id="YDb-1C-XNp"/>
-                            <constraint firstItem="zbY-5g-RaF" firstAttribute="centerX" secondItem="N9b-s0-Edh" secondAttribute="centerX" id="dlw-rp-vqq"/>
-                            <constraint firstItem="09C-au-JvV" firstAttribute="top" secondItem="h3z-C6-5mO" secondAttribute="bottom" constant="44" id="ovZ-TW-vPM"/>
+                            <constraint firstItem="KHl-cY-Liv" firstAttribute="top" secondItem="N9b-s0-Edh" secondAttribute="topMargin" constant="13" id="Y64-hD-hRk"/>
+                            <constraint firstItem="zbY-5g-RaF" firstAttribute="top" secondItem="09C-au-JvV" secondAttribute="bottom" constant="38" id="ew7-HB-p6q"/>
+                            <constraint firstItem="09C-au-JvV" firstAttribute="top" secondItem="h3z-C6-5mO" secondAttribute="bottom" constant="45" id="ovZ-TW-vPM"/>
+                            <constraint firstItem="zbY-5g-RaF" firstAttribute="centerX" secondItem="h3z-C6-5mO" secondAttribute="centerX" id="tZr-as-NQy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KHl-cY-Liv" secondAttribute="trailing" constant="67" id="yc9-4j-9dL"/>
                         </constraints>
                     </view>
                 </viewController>
