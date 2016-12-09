@@ -33,6 +33,7 @@ class GameViewController: UIViewController {
         //Background Music
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "RetroHeroes", ofType: "mp3")!))
+            audioPlayer.numberOfLoops = -1
             audioPlayer.prepareToPlay()
             audioPlayer.play()
         }
